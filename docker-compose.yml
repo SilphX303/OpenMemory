@@ -13,7 +13,7 @@ services:
       - OM_DB_PATH=/data/openmemory.sqlite
       - OM_API_KEY=
       - OM_IDE_MODE=false
-      - OM_IDE_ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000,http://10.0.26.11:3000,http://memory-ui.arkadia.network:3000
+      - OM_IDE_ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000,http://10.0.26.11:3000,http://memory-ui.arkadia.network
 
       # Rate Limiting
       - OM_RATE_LIMIT_ENABLED=false
@@ -137,12 +137,12 @@ services:
       context: ./dashboard
       dockerfile: Dockerfile
       args:
-        - NEXT_PUBLIC_API_URL=http://memory.arkadia.network:8180
+        - NEXT_PUBLIC_API_URL=http://memory.arkadia.network
         - NEXT_PUBLIC_API_KEY=
     ports:
       - '3000:3000'
     environment:
-      - NEXT_PUBLIC_API_URL=http://memory.arkadia.network:8180
+      - NEXT_PUBLIC_API_URL=http://memory.arkadia.network
       - NEXT_PUBLIC_API_KEY=
     depends_on:
       openmemory:
