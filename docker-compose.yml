@@ -13,7 +13,7 @@ services:
       - OM_DB_PATH=/data/openmemory.sqlite
       - OM_API_KEY=
       - OM_IDE_MODE=false
-      - OM_IDE_ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000
+      - OM_IDE_ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000,http://10.0.26.11:3000,http://memory-ui.arkadia.network:3000
 
       # Rate Limiting
       - OM_RATE_LIMIT_ENABLED=false
